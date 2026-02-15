@@ -1,36 +1,29 @@
-# VS Global Retail & Staffing Analytics (Bathing Suit Division)
-A comprehensive data analytics solution designed to visualize Victoria's Secret retail performance and staff movement, utilizing Python for high-volume synthetic data generation (50k+ records) and Power BI for relational modeling, capacity forecasting, and geospatial insights.
+# Victoria Secret Facility Manager
+A retail analytics and workforce migration suite designed to manage existing facilites and strategic expansion. This solution integrates a Python-powered 50,000-employee simulation with Power BI geospatial revenue modeling to bridge the gap between human capital and real estate profitability.
 
 **Tech Stack**
-- **Power BI**: Relational modeling (Star Schema), DAX vacancy measures, and Geospatial ranking.
-- **Python (Pandas/NumPy)**: Automated generation of Active Directory datasets and multi-sheet Excel manipulation.
+- **Power BI**: Relational modeling, Geospatial visualization, DAX, and custom brand-aligned UI/UX.
+- **Python (Pandas/NumPy)**: Automated generation of 50k+ unique employee records and multi-sheet Excel manipulation.
 
 **Key Features**
 
-### Geospatial Store Ranking & Profit Analytics
-- **Rank-Based Mapping**: Visualizes store locations globally, categorized by performance ranks (1-5) to identify high-value hubs.
-- **Profit Scalability Chart**: A dynamic line chart showing the "Rank Up" effect—predicting revenue increases when proposed locations move to active status.
-- **Site Status Slicers**: Toggle between Active, Proposed, and Decommissioned retail sites.
+### Strategic Growth & Revenue Modeling
+- **Dynamic Potential Profit**: A Rank-based growth chart that visualizes the "Profit Climb,"Rank 1 (Current) stores against the estimated revenue of Proposed locations (Ranks 2-5).
+- **Expansion Slicers**: Interactive "Rank" and "Division Strategy" filters that allow executives to simulate the financial impact of opening new locations.
+- **Brand Identity**: Custom UI utilizing high-contrast pink and charcoal themes to mirror the professional, editorial aesthetic of a luxury global brand.
 
-### Organizational Matrix & Staffing Modeling
-- **50,000 Employee Simulation**: Python-generated Active Directory mimicking a real-world enterprise environment including unique IDs, titles, and department hierarchies.
-- **Work Unit Synchronization**: A lookup table architecture that ensures 100% alignment between HR departments and physical work units.
-- **Employee Type Segmentation**: Analysis of Full-Time vs. Part-Time distribution across global locations.
+### Geospatial Market Intelligence
+- **(Future) Locations Map**: Real-world NYC Latitude/Longitude plotting that visualizes the current retail footprint across Manhattan, Brooklyn, and Queens.
+- **Assessment Mapping**: Identification of high-value corridors through color-coded status bubbles (Active vs. Proposed).
 
-### Predictive Facility & Vacancy Analysis
-- **The "Moving Table" Logic**: Tracks the scheduled migration of staff from current facilities to future locations/floors.
-- **Capacity vs. Future Total**: A Matrix visual that calculates future headcount against facility limits to identify "at-capacity" risks.
-- **Dynamic Vacancy Measure**: Custom DAX formulas that subtract "Movers" from "Future Capacity" to provide real-time seating availability counts.
+### Advanced Workforce Matrix & Capacity Logic
+- **Location Occupancy Matrix**: A comprehensive migration tool that cross-references `Current Facility` against `Future Facility` to predict staff flows.
+- **Capacity Guardrails**: Integrated vacancy logic at the bottom of the matrix showing "Total Employees," "Future Capacity," and "Vacancies" to prevent site over-saturation.
+- **Departmental Segmentation**: Real-time visibility into specific units (Swimsuits, Sweatsuits, Mens, etc.) to ensure balanced distribution across the 20 current and 10 proposed sites.
 
----
-
-## Data Structure
-The app utilizes a centralized `VS_Data.xlsx` file generated via Python with the following architecture:
-
-| Sheet Name | Purpose | Key Fields |
-| :--- | :--- | :--- |
-| **Store_Locations** | Map & Profit Data | SiteId, Rank, EstProfitIncrease |
-| **Active_Directory** | Employee Fact Table | Email, Department, StreetAddress |
-| **Moving_Table** | Staff Migration Logic | ID, Future Facility, Future Floor |
-| **Work_Unit** | HR Dimension Table | DIV, SubDivision, Operations |
-| **Facilities_Future** | Capacity Forecasting | FullTimeCapacity, SiteId |
+**Data Architecture**
+The app utilizes a centralized `VS_Data.xlsx` engine with a 1:Many relational structure:
+- **Active_Directory**: 50,000 records mimicking an enterprise environment with unique titles and departments.
+- **Store_Locations**: Geospatial master list containing Site Rank, Status, and Estimated Profit.
+- **Work_Unit**: A hierarchy covering Apparel, Intimates, Mens, Accessories, and Corporate.
+- **Moving_Table**: The logic-gate for staff migration and facility vacancy forecasting.
