@@ -27,3 +27,6 @@ The app utilizes a centralized `VS_Data.xlsx` engine with a 1:Many relational st
 - **Store_Locations**: Geospatial master list containing Site Rank, Status, and Estimated Profit.
 - **Work_Unit**: A hierarchy covering Apparel, Intimates, Mens, Accessories, and Corporate.
 - **Moving_Table**: The logic-gate for staff migration and facility vacancy forecasting.
+
+> [!WARNING]
+> Data used is NOT REAL
