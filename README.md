@@ -28,7 +28,7 @@ The app utilizes a centralized `VS_Data.xlsx` engine with a 1:Many relational st
 - **Work_Unit**: A hierarchy covering Apparel, Intimates, Mens, Accessories, and Corporate.
 - **Moving_Table**: The logic-gate for staff migration and facility vacancy forecasting.
 
-- ## How to Use
+### How to Use
 To explore this analytics solution locally:
 1. **Download the Dataset**: Download the `VS_Data.xlsx` file from this repository.
 2. **Download the Power BI File**: Download the `.pbix` file.
